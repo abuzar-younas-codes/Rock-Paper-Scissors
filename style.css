@@ -68,61 +68,46 @@ img{
     border-radius: 1rem;
 }
 
-/* Mobile Optimization - Final Fix */
+
+/* Mobile Optimization - FINAL FIX */
 @media (max-width: 600px) {
-    /* 1. Poore page ki padding kam karein */
-    body {
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden; /* Screen side pe move na ho */
-    }
-
-    /* 2. Heading ko screen ke mutabiq chota karein */
-    h1 {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-    /* 3. Cars/Images ko ek line mein laane ke liye */
-    .choices {
-        display: flex;
-        flex-direction: row; /* Ek line mein */
-        justify-content: center;
-        gap: 10px;
-        margin: 20px 0;
-    }
-
-    .choice img {
-        width: 60px; /* Size chota kiya taaki 3 images fit aayein */
-        height: 60px;
-    }
-
-    /* 4. Score Board (Jo aapke screenshot mein bohot bada hai) */
+    /* 1. Score Board ka text chota karein */
     .score-board {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        font-size: 0.8rem; /* Text size chota kiya */
-        width: 100%;
+        gap: 30px; /* Do scores ke beech ki jagah */
+        margin: 20px 0;
     }
 
+    /* Score labels (User Score, Computer Score) ka size */
     .score p {
-        margin: 5px 0;
+        font-size: 0.9rem !important; /* !important lagaya taaki purani settings override hon */
+        margin-bottom: 5px;
     }
 
+    /* Score Numbers (10, 8) ka size */
     #user-score, #comp-score {
-        font-size: 1.5rem; /* Numbers ko munasib bada rakha */
+        font-size: 1.8rem !important;
     }
 
-    /* 5. Message (You win/Lose) ka box */
+    /* 2. Images ko ek line mein laane ke liye */
+    .choices {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 2rem;
+    }
+
+    .choice img {
+        width: 70px !important; 
+        height: 70px !important;
+    }
+
+    /* 3. Message box (Game was draw) */
     #msg {
         font-size: 0.8rem;
-        width: auto;
-        padding: 10px 20px;
-    }
-
-    .msg-container {
-        margin-top: 20px;
+        width: 80%;
+        padding: 10px;
     }
 }
