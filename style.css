@@ -68,45 +68,61 @@ img{
     border-radius: 1rem;
 }
 
+/* Mobile Optimization - Final Fix */
 @media (max-width: 600px) {
-    /* 1. Heading ko aur chota karein taaki jagah bache */
+    /* 1. Poore page ki padding kam karein */
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden; /* Screen side pe move na ho */
+    }
+
+    /* 2. Heading ko screen ke mutabiq chota karein */
     h1 {
-        font-size: 1.4rem;
-        margin: 10px 0;
+        font-size: 1.2rem;
+        padding: 10px;
     }
 
-    /* 2. Images ko ek hi line mein lane ke liye */
+    /* 3. Cars/Images ko ek line mein laane ke liye */
     .choices {
-        display: flex;         /* Flexbox enable kiya */
-        flex-direction: row;   /* Forced ek line (row) mein rakha */
+        display: flex;
+        flex-direction: row; /* Ek line mein */
         justify-content: center;
-        gap: 10px;            /* Do images ke darmiyan thoda gap */
-        margin-top: 1rem;
+        gap: 10px;
+        margin: 20px 0;
     }
 
-    /* 3. Images ka size chota karein taaki 3 images fit aa jayein */
     .choice img {
-        width: 75px;           /* Size chota kiya taaki 1 line mein fit hon */
-        height: 75px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 60px; /* Size chota kiya taaki 3 images fit aayein */
+        height: 60px;
     }
 
-    /* 4. Score board ka text aur gap adjust karein */
+    /* 4. Score Board (Jo aapke screenshot mein bohot bada hai) */
     .score-board {
-        font-size: 0.8rem;
-        gap: 15px;
-        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 0.8rem; /* Text size chota kiya */
+        width: 100%;
+    }
+
+    .score p {
+        margin: 5px 0;
     }
 
     #user-score, #comp-score {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Numbers ko munasib bada rakha */
     }
 
-    /* 5. Message box ka text mobile ke liye set karein */
+    /* 5. Message (You win/Lose) ka box */
     #msg {
-        font-size: 0.85rem;
-        padding: 8px 15px;
-        width: 80%;
+        font-size: 0.8rem;
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .msg-container {
+        margin-top: 20px;
     }
 }
