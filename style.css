@@ -68,25 +68,45 @@ img{
     border-radius: 1rem;
 }
 
-/* Mobile screen ke liye adjustment */
 @media (max-width: 600px) {
-    .choice img {
-        width: 80px;  /* Computer par size bada hoga, mobile par chota */
-        height: 80px;
-    }
-
-    .choices {
-        gap: 1rem;
-        flex-wrap: wrap; /* Images ko ek dusre ke niche aane dega agar jagah kam hui */
-        justify-content: center;
-    }
-
+    /* 1. Heading ko aur chota karein taaki jagah bache */
     h1 {
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
+
+    /* 2. Images ko ek hi line mein lane ke liye */
+    .choices {
+        display: flex;         /* Flexbox enable kiya */
+        flex-direction: row;   /* Forced ek line (row) mein rakha */
+        justify-content: center;
+        gap: 10px;            /* Do images ke darmiyan thoda gap */
+        margin-top: 1rem;
+    }
+
+    /* 3. Images ka size chota karein taaki 3 images fit aa jayein */
+    .choice img {
+        width: 75px;           /* Size chota kiya taaki 1 line mein fit hon */
+        height: 75px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* 4. Score board ka text aur gap adjust karein */
+    .score-board {
+        font-size: 0.8rem;
+        gap: 15px;
+        margin-top: 1rem;
+    }
+
+    #user-score, #comp-score {
         font-size: 1.8rem;
     }
 
+    /* 5. Message box ka text mobile ke liye set karein */
     #msg {
-        font-size: 1rem;
-        width: 90%;
+        font-size: 0.85rem;
+        padding: 8px 15px;
+        width: 80%;
     }
 }
