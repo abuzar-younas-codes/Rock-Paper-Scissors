@@ -68,46 +68,41 @@ img{
     border-radius: 1rem;
 }
 
-
-/* Mobile Optimization - FINAL FIX */
 @media (max-width: 600px) {
-    /* 1. Score Board ka text chota karein */
+    /* 1. Score Board Container */
     .score-board {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px; /* Do scores ke beech ki jagah */
-        margin: 20px 0;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin: 10px auto !important;
     }
 
-    /* Score labels (User Score, Computer Score) ka size */
+    /* 2. Dono Scores ka Text (User aur Computer) */
     .score p {
-        font-size: 0.9rem !important; /* !important lagaya taaki purani settings override hon */
-        margin-bottom: 5px;
+        font-size: 1rem !important; /* Isse text chota ho jayega */
+        margin: 5px 0 !important;
+        white-space: nowrap !important; /* Text ko ek line mein rakhega */
     }
 
-    /* Score Numbers (10, 8) ka size */
+    /* 3. Score Numbers (16, 24 wagera) */
     #user-score, #comp-score {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important; /* Numbers ka size munasib rakha */
+        display: block !important;
     }
 
-    /* 2. Images ko ek line mein laane ke liye */
+    /* 4. Images ko ek line mein laane ke liye */
     .choices {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 2rem;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 10px !important;
     }
 
     .choice img {
-        width: 70px !important; 
-        height: 70px !important;
-    }
-
-    /* 3. Message box (Game was draw) */
-    #msg {
-        font-size: 0.8rem;
-        width: 80%;
-        padding: 10px;
+        width: 65px !important; 
+        height: 65px !important;
     }
 }
+
